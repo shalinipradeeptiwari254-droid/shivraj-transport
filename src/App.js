@@ -670,4 +670,4 @@ function Admin({ siteData, setSiteData }) {
             </div>
             {siteData.routes.map((r,i)=>(
               <div key={i} style={{display:"grid",gridTemplateColumns:"repeat(5,1fr) auto",gap:10,
-                alignItems:"end",marginBottom:14,background:"#f9f9fc",padding:16,borderRadius:8,border:"1px s
+                alignItems:"end",marginBottom:14,background:"#f9f9fc",padding:16,borderRadius:8,border:"1px solid"
