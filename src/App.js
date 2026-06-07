@@ -156,7 +156,7 @@ function Services({ data }) {
       </div>
     </section>
   );
-             }
+}
 function FreightRates({ data }) {
   return (
     <section style={{background:WHITE,padding:"80px 24px"}}>
@@ -189,7 +189,7 @@ function FreightRates({ data }) {
                     <span style={{background:`${ORANGE}22`,color:ORANGE,padding:"2px 10px",borderRadius:20,fontSize:12,fontWeight:700}}>{r.days}</span>
                   </td>
                   <td style={{padding:"13px 20px",color:NAVY,fontWeight:700,fontSize:15}}>{r.rate}</td>
-                </table>
+                </tr>
               ))}
             </tbody>
           </table>
@@ -349,7 +349,7 @@ function Footer({ setPage, data }) {
       </div>
     </footer>
   );
-}
+                        }
 function Admin({ siteData, setSiteData }) {
   const [auth, setAuth] = useState(false);
   const [pw, setPw] = useState("");
