@@ -668,6 +668,21 @@ function Admin({ siteData, setSiteData }) {
               <h3 style={{fontFamily:"'Oswald',sans-serif",color:NAVY,fontSize:22,margin:0}}>🗺️ Freight Routes</h3>
               <button onClick={addRoute} style={btnOrange}>+ Add Route</button>
             </div>
-            {siteData.routes.map((r,i)=>(
-              <div key={i} style={{display:"grid",gridTemplateColumns:"repeat(5,1fr) auto",gap:10,
-                alignItems:"end",marginBottom:14,background:"#f9f9fc",padding:16,borderRadius:8,border:"1px solid"
+            {{siteData.routes.map((r, i) => (
+  <div
+    key={i}
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(5,1fr) auto",
+      gap: 10,
+      alignItems: "end",
+      marginBottom: 14,
+      background: "#f9f9fc",
+      padding: 16,
+      borderRadius: 8,
+      border: "1px solid #ddd"
+    }}
+  >
+    {/* Your route content here */}
+  </div>
+))}
