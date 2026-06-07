@@ -93,7 +93,7 @@ function Hero({ setPage, data }) {
       display:"flex",alignItems:"center",justifyContent:"center",position:"relative",overflow:"hidden",paddingTop:64}}>
       <div style={{position:"absolute",right:-60,bottom:0,fontSize:320,opacity:.04,lineHeight:1}}>🚛</div>
       <div style={{position:"absolute",bottom:0,left:0,right:0,height:6,
-        background:`linear-gradient(90deg,${ORANGE},#ffaa44,${ORANGE})`}}/>
+        background:`linear-gradient(90deg,${ORANGE},#ffaa44,${ORANGE})`}}></div>
       <div style={{maxWidth:900,textAlign:"center",padding:"0 24px",position:"relative"}}>
         <div style={{display:"inline-block",background:ORANGE,color:WHITE,fontFamily:"'Oswald',sans-serif",
           fontSize:12,letterSpacing:4,padding:"6px 18px",borderRadius:2,marginBottom:24}}>
@@ -139,7 +139,7 @@ function Services({ data }) {
         <div style={{textAlign:"center",marginBottom:56}}>
           <div style={{fontFamily:"'Oswald',sans-serif",color:ORANGE,fontSize:13,letterSpacing:4,marginBottom:8}}>WHAT WE OFFER</div>
           <h2 style={{fontFamily:"'Oswald',sans-serif",fontSize:42,color:NAVY,margin:0}}>Our Logistics Services</h2>
-          <div style={{width:60,height:4,background:ORANGE,margin:"16px auto 0",borderRadius:2}}/>
+          <div style={{width:60,height:4,background:ORANGE,margin:"16px auto 0",borderRadius:2}}></div>
         </div>
         <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(300px,1fr))",gap:24}}>
           {data.services.map((s,i)=>(
@@ -157,6 +157,7 @@ function Services({ data }) {
     </section>
   );
 }
+
 function FreightRates({ data }) {
   return (
     <section style={{background:WHITE,padding:"80px 24px"}}>
@@ -164,7 +165,7 @@ function FreightRates({ data }) {
         <div style={{textAlign:"center",marginBottom:56}}>
           <div style={{fontFamily:"'Oswald',sans-serif",color:ORANGE,fontSize:13,letterSpacing:4,marginBottom:8}}>TRANSPARENT PRICING</div>
           <h2 style={{fontFamily:"'Oswald',sans-serif",fontSize:42,color:NAVY,margin:0}}>Freight Rates from Mumbai / Thane</h2>
-          <div style={{width:60,height:4,background:ORANGE,margin:"16px auto 0",borderRadius:2}}/>
+          <div style={{width:60,height:4,background:ORANGE,margin:"16px auto 0",borderRadius:2}}></div>
           <p style={{fontFamily:"'Lato',sans-serif",color:"#888",marginTop:16,fontSize:14}}>
             *Rates indicative. Final pricing based on weight, dimensions & commodity. Contact us for exact quotes.
           </p>
@@ -173,10 +174,11 @@ function FreightRates({ data }) {
           <table style={{width:"100%",borderCollapse:"collapse",fontFamily:"'Lato',sans-serif"}}>
             <thead>
               <tr style={{background:NAVY}}>
-                {["Origin","Destination","Distance","Transit Time","Approx. Rate"].map(h=>(
-                  <th key={h} style={{color:WHITE,padding:"14px 20px",textAlign:"left",fontSize:13,
-                    letterSpacing:1,fontFamily:"'Oswald',sans-serif",whiteSpace:"nowrap"}}>{h}</th>
-                ))}
+                <th style={{color:WHITE,padding:"14px 20px",textAlign:"left",fontSize:13,letterSpacing:1,fontFamily:"'Oswald',sans-serif"}}>Origin</th>
+                <th style={{color:WHITE,padding:"14px 20px",textAlign:"left",fontSize:13,letterSpacing:1,fontFamily:"'Oswald',sans-serif"}}>Destination</th>
+                <th style={{color:WHITE,padding:"14px 20px",textAlign:"left",fontSize:13,letterSpacing:1,fontFamily:"'Oswald',sans-serif"}}>Distance</th>
+                <th style={{color:WHITE,padding:"14px 20px",textAlign:"left",fontSize:13,letterSpacing:1,fontFamily:"'Oswald',sans-serif"}}>Transit Time</th>
+                <th style={{color:WHITE,padding:"14px 20px",textAlign:"left",fontSize:13,letterSpacing:1,fontFamily:"'Oswald',sans-serif"}}>Approx. Rate</th>
               </tr>
             </thead>
             <tbody>
@@ -213,7 +215,7 @@ function About({ data }) {
         <div>
           <div style={{fontFamily:"'Oswald',sans-serif",color:ORANGE,fontSize:13,letterSpacing:4,marginBottom:8}}>ABOUT US</div>
           <h2 style={{fontFamily:"'Oswald',sans-serif",fontSize:42,color:NAVY,margin:"0 0 20px"}}>Driven by Trust, Powered by Experience</h2>
-          <div style={{width:60,height:4,background:ORANGE,marginBottom:24,borderRadius:2}}/>
+          <div style={{width:60,height:4,background:ORANGE,marginBottom:24,borderRadius:2}}></div>
           <p style={{fontFamily:"'Lato',sans-serif",color:"#555",lineHeight:1.8,marginBottom:24,fontSize:15}}>{company.about}</p>
           <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16}}>
             {["GPS Tracked Fleet","24/7 Customer Support","Insurance Coverage","Pan-India Network"].map(f=>(
@@ -278,7 +280,7 @@ function Contact({ data }) {
         <div style={{textAlign:"center",marginBottom:48}}>
           <div style={{fontFamily:"'Oswald',sans-serif",color:ORANGE,fontSize:13,letterSpacing:4,marginBottom:8}}>GET IN TOUCH</div>
           <h2 style={{fontFamily:"'Oswald',sans-serif",fontSize:42,color:NAVY,margin:0}}>Request a Quote</h2>
-          <div style={{width:60,height:4,background:ORANGE,margin:"16px auto 0",borderRadius:2}}/>
+          <div style={{width:60,height:4,background:ORANGE,margin:"16px auto 0",borderRadius:2}}></div>
         </div>
         <div style={{background:WHITE,borderRadius:12,padding:"40px 48px",boxShadow:"0 4px 40px rgba(0,0,0,.08)"}}>
           <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"16px 24px",marginBottom:16}}>
@@ -349,7 +351,7 @@ function Footer({ setPage, data }) {
       </div>
     </footer>
   );
-                        }
+}
 function Admin({ siteData, setSiteData }) {
   const [auth, setAuth] = useState(false);
   const [pw, setPw] = useState("");
@@ -395,8 +397,7 @@ function Admin({ siteData, setSiteData }) {
   const btnNavy  = { background:NAVY, color:WHITE, border:"none", fontFamily:"'Oswald',sans-serif", fontSize:13, padding:"7px 16px", borderRadius:4, cursor:"pointer" };
   const btnRed   = { background:"#e74c3c", color:WHITE, border:"none", fontFamily:"'Oswald',sans-serif", fontSize:13, padding:"7px 16px", borderRadius:4, cursor:"pointer" };
   const btnGhost = { background:"rgba(255,255,255,.15)", color:WHITE, border:"none", fontFamily:"'Oswald',sans-serif", fontSize:13, padding:"7px 16px", borderRadius:4, cursor:"pointer" };
-
-  const TABS = [
+const TABS = [
     {id:"leads",    label:"📨 Leads"},
     {id:"company",  label:"🏢 Company Info"},
     {id:"stats",    label:"📊 Stats"},
@@ -480,7 +481,7 @@ function Admin({ siteData, setSiteData }) {
                         <th key={h} style={{color:WHITE,padding:"13px 14px",textAlign:"left",fontSize:12,
                           letterSpacing:1,fontFamily:"'Oswald',sans-serif",whiteSpace:"nowrap"}}>{h}</th>
                       ))}
-                    </table>
+                    </tr>
                   </thead>
                   <tbody>
                     {leads.map((l,i)=>(
@@ -573,8 +574,7 @@ function Admin({ siteData, setSiteData }) {
             )}
           </>
         )}
-
-        {tab==="company" && (
+          {tab==="company" && (
           <div style={cardStyle}>
             <h3 style={{fontFamily:"'Oswald',sans-serif",color:NAVY,fontSize:22,margin:"0 0 24px"}}>🏢 Company Information</h3>
             <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"16px 24px"}}>
@@ -724,4 +724,6 @@ export default function App() {
       <Footer setPage={setPage} data={siteData}/>
     </div>
   );
-}
+              }
+
+ 
